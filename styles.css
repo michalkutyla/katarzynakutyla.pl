@@ -1,13 +1,12 @@
 
 :root {
   --color-bg: #f8f7f4;
+  --color-bg-secondary: #CCD9C5;
   --color-text: #1f2937;
   --color-primary: #2f6f66;
   --color-accent: #d9a97c;
   --color-muted: #6b7280;
-  --color-surface: #ffffff;
   --maxw: 1100px;
-  --radius: 16px;
   --shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
@@ -51,7 +50,7 @@ img {
   top: 0;
   z-index: 50;
   backdrop-filter: saturate(120%) blur(8px);
-  background: rgba(248, 247, 244, 0.85);
+  background: var(--color-accent);
   border-bottom: 1px solid rgba(31, 41, 55, 0.15);
 }
 
@@ -68,14 +67,6 @@ img {
   gap: 12px;
   font-weight: 700;
   letter-spacing: 0.3px;
-}
-
-.brand .dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--color-primary);
-  box-shadow: 0 0 0 4px rgba(47, 111, 102, 0.2);
 }
 
 nav a {
@@ -96,7 +87,7 @@ nav a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #C7C7C7;
+  background-color: var(--color-bg-secondary);
 }
 
 .hero-full::before {
@@ -119,12 +110,13 @@ nav a:hover {
 
 .hero-text {
   color: #fff;
-  padding: 40px 0;
+  padding: 20px 0;
   margin: 0;
+  transform: translateY(-100px);
 }
 
 .hero-text h1 {
-  font-size: clamp(26px, 4vw, 42px);
+  font-size: clamp(22px, 3.5vw, 36px);
   margin: 0;
   max-width: 600px;
 }
@@ -150,7 +142,6 @@ nav a:hover {
 }
 
 .card {
-  color: #111827;
   padding: 24px;
 }
 
@@ -193,12 +184,8 @@ nav a:hover {
   margin-top: 20px;
 }
 
-/* Contact section */
-.contact {
-  display: grid;
-  gap: 18px;
-  grid-template-columns: 1.2fr 1fr;
-  align-items: start;
+#kontakt {
+  background-color: var(--color-bg-secondary);
 }
 
 /* Portrait */
@@ -210,6 +197,7 @@ nav a:hover {
 .portrait-img {
   width: 500px;
   height: auto;
+  max-height: 745px;
   border-radius: 20px;
   box-shadow: var(--shadow);
   object-fit: cover;
@@ -220,6 +208,7 @@ footer {
   padding: 28px 0;
   border-top: 1px solid rgba(31, 41, 55, 0.15);
   color: var(--color-muted);
+  background-color: var(--color-bg-secondary);
 }
 
 .small {
@@ -240,9 +229,7 @@ footer {
     grid-template-columns: 1fr;
   }
   
-  .contact {
-    grid-template-columns: 1fr;
-  }
+
   
   .portrait-container {
     margin-bottom: 20px;
