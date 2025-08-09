@@ -1,12 +1,24 @@
 
 :root {
-    --color-bg: #f8f7f4; --color-text: #1f2937; --color-primary: #2f6f66; --color-accent: #d9a97c; --color-muted: #6b7280; --color-surface: #ffffff;
+  --color-bg: #f8f7f4;
+  --color-text: #1f2937;
+  --color-primary: #2f6f66;
+  --color-accent: #d9a97c;
+  --color-muted: #6b7280;
+  --color-surface: #ffffff;
   --maxw: 1100px;
   --radius: 16px;
-  --shadow: 0 10px 30px rgba(0,0,0,.08);
+  --shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
@@ -14,125 +26,69 @@ body {
   color: var(--color-text);
   line-height: 1.65;
 }
-a { color: inherit; text-decoration: none; }
-img { max-width: 100%; height: auto; display: block; }
 
-.container { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-header.site-header {
-  position: sticky; top: 0; z-index: 50;
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
   backdrop-filter: saturate(120%) blur(8px);
-  background: color-mix(in oklab, var(--color-bg) 85%, transparent);
-  border-bottom: 1px solid color-mix(in oklab, var(--color-text) 15%, transparent);
+  background: rgba(248, 247, 244, 0.85);
+  border-bottom: 1px solid rgba(31, 41, 55, 0.15);
 }
 
-.navbar { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
-.brand { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: .3px; }
-.brand .dot { width: 12px; height: 12px; border-radius: 999px; background: var(--color-primary); box-shadow: 0 0 0 4px color-mix(in oklab, var(--color-primary) 20%, transparent); }
-nav a { margin-left: 18px; padding: 8px 12px; border-radius: 10px; }
-nav a:hover { background: color-mix(in oklab, var(--color-primary) 18%, transparent); }
-
-.hero {
-  display: grid; gap: 28px; align-items: center;
-  grid-template-columns: 1.2fr 1fr;
-  padding: 56px 0 28px;
-}
-@media (max-width: 880px) { .hero { grid-template-columns: 1fr; padding-top: 28px; } }
-.hero .copy h1 { font-size: clamp(28px, 4vw, 46px); margin: 0 0 10px; }
-.hero .copy p.lead { font-size: clamp(16px, 2vw, 20px); color: var(--color-muted); max-width: 50ch; }
-.cta { display: flex; gap: 12px; margin-top: 18px; flex-wrap: wrap; }
-.button {
-  display:inline-flex; align-items:center; gap:10px;
-  background: var(--color-primary); color: #fff;
-  padding: 12px 16px; border-radius: 12px; font-weight: 600; border: none; cursor: pointer;
-  box-shadow: var(--shadow);
-}
-.button.secondary { background: color-mix(in oklab, var(--color-accent) 85%, #ffffff 15%); color: #111; }
-
-.portrait { border-radius: 24px; overflow: hidden; box-shadow: var(--shadow); border: 6px solid color-mix(in oklab, var(--color-primary) 10%, transparent); }
-
-.section { padding: 52px 0; }
-.section h2 { font-size: clamp(24px, 3vw, 34px); margin: 0 0 18px; }
-.card { color: #111827; padding: 24px; }
-.grid { display: grid; gap: 18px; }
-.grid.cols-2 { grid-template-columns: auto 1fr; }
-@media (max-width: 880px) { .grid.cols-2 { grid-template-columns: 1fr; } }
-
-/* Oferta section - horizontal layout */
-#oferta .grid { 
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-  gap: 20px; 
-}
-@media (max-width: 768px) { 
-  #oferta .grid { 
-    grid-template-columns: 1fr; 
-  } 
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
 }
 
-.offer-item { border-left: 6px solid var(--color-accent); padding-left: 16px; }
-.offer-item h3 { margin: 0 0 8px; font-size: 20px; }
-.offer-item p { margin: 0; color: var(--color-muted); }
-
-/* Pricing section */
-.pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-  margin-top: 20px;
-}
-
-.pricing-card {
-  background: var(--color-surface);
-  padding: 32px 24px;
-  border-radius: 0;
-  box-shadow: var(--shadow);
-  text-align: center;
-  border: 2px solid transparent;
-  transition: all 0.3s ease;
-}
-
-.pricing-card:hover {
-  border-color: var(--color-primary);
-  transform: translateY(-2px);
-}
-
-.pricing-card h3 {
-  margin: 0 0 16px;
-  font-size: 20px;
-  color: var(--color-text);
-  font-weight: 600;
-}
-
-.pricing-card .price {
-  font-size: 36px;
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   font-weight: 700;
-  color: var(--color-primary);
-  margin: 0 0 8px;
+  letter-spacing: 0.3px;
 }
 
-.pricing-card .duration {
-  font-size: 16px;
-  color: var(--color-muted);
-  margin: 0;
+.brand .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(47, 111, 102, 0.2);
 }
 
-.contact { display: grid; gap: 18px; grid-template-columns: 1.2fr 1fr; align-items: start; }
-@media (max-width: 880px) { .contact { grid-template-columns: 1fr; } }
-
-form.contact-form input, form.contact-form textarea {
-  width: 100%; padding: 12px 14px; border-radius: 12px; border: 1px solid color-mix(in oklab, var(--color-text) 20%, transparent);
-  background: color-mix(in oklab, var(--color-bg) 80%, #fff 20%); color: inherit;
+nav a {
+  margin-left: 18px;
+  padding: 8px 12px;
+  border-radius: 10px;
 }
-form.contact-form textarea { min-height: 120px; resize: vertical; }
-form.contact-form .row { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
-@media (max-width: 640px) { form.contact-form .row { grid-template-columns: 1fr; } }
-form.contact-form button { margin-top: 8px; }
 
-footer { padding: 28px 0; border-top: 1px solid color-mix(in oklab, var(--color-text) 15%, transparent); color: var(--color-muted); }
-.small { font-size: 14px; }
+nav a:hover {
+  background: rgba(47, 111, 102, 0.18);
+}
 
-
-
+/* Hero section */
 .hero-full {
   position: relative;
   width: 100%;
@@ -140,8 +96,7 @@ footer { padding: 28px 0; border-top: 1px solid color-mix(in oklab, var(--color-
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background: url('assets/wall.jpg'); */
-  background-color: #C7C7C7; /* szare tło po bokach */
+  background-color: #C7C7C7;
 }
 
 .hero-full::before {
@@ -154,17 +109,12 @@ footer { padding: 28px 0; border-top: 1px solid color-mix(in oklab, var(--color-
   max-width: 1400px;
   height: 100%;
   background: url('assets/hero.jpg') no-repeat center center/cover;
-  background-size: cover;
-  background-position: center;
   z-index: 1;
 }
 
 .hero-full .container {
   position: relative;
   z-index: 2;
-  width: 100%;
-  max-width: var(--maxw);
-  margin: 0 auto;
 }
 
 .hero-text {
@@ -172,16 +122,86 @@ footer { padding: 28px 0; border-top: 1px solid color-mix(in oklab, var(--color-
   padding: 40px 0;
   margin: 0;
 }
+
 .hero-text h1 {
   font-size: clamp(26px, 4vw, 42px);
   margin: 0;
   max-width: 600px;
 }
 
+/* Quote section */
 .quote p {
   color: var(--color-primary);
+  font-size: 1.25rem;
+  font-style: italic;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
+/* Sections */
+.section {
+  padding: 52px 0;
+}
+
+.section h2 {
+  font-size: clamp(24px, 3vw, 34px);
+  margin: 0 0 18px;
+}
+
+.card {
+  color: #111827;
+  padding: 24px;
+}
+
+/* Grid layouts */
+.grid {
+  display: grid;
+  gap: 18px;
+}
+
+.grid.cols-2 {
+  grid-template-columns: auto 1fr;
+}
+
+#oferta .grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Offer items */
+.offer-item {
+  border-left: 6px solid var(--color-accent);
+  padding-left: 16px;
+}
+
+.offer-item h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.offer-item p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+/* Pricing section */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+
+/* Contact section */
+.contact {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: start;
+}
+
+/* Portrait */
 .portrait-container {
   display: flex;
   justify-content: center;
@@ -195,9 +215,43 @@ footer { padding: 28px 0; border-top: 1px solid color-mix(in oklab, var(--color-
   object-fit: cover;
 }
 
+/* Footer */
+footer {
+  padding: 28px 0;
+  border-top: 1px solid rgba(31, 41, 55, 0.15);
+  color: var(--color-muted);
+}
+
+.small {
+  font-size: 14px;
+}
+
+/* Responsive design */
 @media (max-width: 880px) {
+  .hero-full {
+    padding-top: 28px;
+  }
+  
+  .grid.cols-2 {
+    grid-template-columns: 1fr;
+  }
+  
+  #oferta .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact {
+    grid-template-columns: 1fr;
+  }
+  
   .portrait-container {
     margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  #oferta .grid {
+    grid-template-columns: 1fr;
   }
 }
 
