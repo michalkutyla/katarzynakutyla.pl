@@ -45,7 +45,7 @@ img {
 
 /* Navigation */
 .navbar {
-  background: var(--color-accent) !important;
+  background: var(--color-bg-secondary) !important;
   backdrop-filter: saturate(120%) blur(8px);
   border-bottom: 1px solid rgba(31, 41, 55, 0.15);
   padding: 16px 0;
@@ -90,7 +90,6 @@ img {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  background-color: var(--color-bg-secondary);
   margin-top: -80px; /* Compensate for body padding */
   padding-top: 80px;
 }
@@ -156,7 +155,7 @@ img {
 
 /* Service Cards */
 .service-card {
-  border-left: 6px solid var(--color-accent) !important;
+  border-left: 6px solid var(--color-bg-secondary) !important;
   padding-left: 16px !important;
 }
 
