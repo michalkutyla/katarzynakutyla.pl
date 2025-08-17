@@ -202,6 +202,11 @@ img {
   color: var(--color-primary);
 }
 
+/* Primary colored icons */
+.icon-primary {
+  color: var(--color-primary) !important;
+}
+
 /* Footer */
 .footer {
   background-color: var(--color-bg-secondary);
