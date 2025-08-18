@@ -57,6 +57,13 @@ img {
   color: var(--color-text) !important;
 }
 
+.navbar-brand-icon {
+  color: var(--color-primary) !important;
+  margin-left: 8px;
+  padding-right: 10px;
+  font-size: 1.5em;
+}
+
 .navbar-nav .nav-link {
   color: var(--color-text) !important;
   margin-left: 18px;
