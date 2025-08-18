@@ -4,7 +4,7 @@
   --color-bg-secondary: #CCD9C5;
   --color-text: #1f2937;
   --color-primary: #2f6f66;
-  --color-accent: #d9a97c;
+  --color-accent: #d9a97c; /* Not used anymore but keeping it for not in case we want need an accent. TODO - remove when we finish styling. */
   --color-muted: #6b7280;
   --maxw: 1100px;
   --shadow: 0 10px 30px rgba(0,0,0,0.08);
@@ -223,7 +223,7 @@ img {
   }
   
   .navbar-collapse {
-    background: rgba(217, 169, 124, 0.95);
+    background: var(--color-bg-secondary);
     border-radius: 10px;
     margin-top: 16px;
     padding: 16px;
