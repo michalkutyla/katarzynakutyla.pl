@@ -97,7 +97,7 @@ img {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  margin-top: -80px; /* Compensate for body padding */
+  margin-top: 10px;
   padding-top: 80px;
 }
 
