@@ -3,8 +3,7 @@
   --color-bg: #f8f7f4;
   --color-bg-secondary: #CCD9C5;
   --color-text: #1f2937;
-  --color-primary: #2f6f66;
-  --color-accent: #d9a97c; /* Not used anymore but keeping it for not in case we want need an accent. TODO - remove when we finish styling. */
+  --color-accent: #7e3285;
   --color-muted: #6b7280;
   --maxw: 1100px;
   --shadow: 0 10px 30px rgba(0,0,0,0.08);
@@ -58,7 +57,7 @@ img {
 }
 
 .navbar-brand-icon {
-  color: var(--color-primary) !important;
+  color: var(--color-accent) !important;
   margin-left: 8px;
   padding-right: 10px;
   font-size: 1.5em;
@@ -120,19 +119,18 @@ img {
 }
 
 .hero-title {
-  color: #fff;
+  color: var(--color-muted);
   font-size: clamp(22px, 3.5vw, 36px);
   margin: 0;
   max-width: 400px;
   transform: none;
-  padding-top: 40px;
+  padding-top: 150px;
 }
 
 /* Quote Section */
 .blockquote {
-  color: var(--color-primary);
+  color: var(--color-text);
   font-size: 1.25rem;
-  font-style: italic;
 }
 
 /* Section Titles */
@@ -162,7 +160,7 @@ img {
 
 /* Service Cards */
 .service-card {
-  border-left: 6px solid var(--color-bg-secondary) !important;
+  border-left: 6px solid var(--color-accent) !important;
   padding-left: 16px !important;
 }
 
@@ -186,7 +184,7 @@ img {
 .price {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--color-accent);
   margin: 0;
 }
 
@@ -196,7 +194,7 @@ img {
 }
 
 .contact-section h5 {
-  color: var(--color-primary);
+  color: var(--color-accent);
   margin-bottom: 10px;
 }
 
@@ -206,12 +204,12 @@ img {
 }
 
 .contact-section a:hover {
-  color: var(--color-primary);
+  color: var(--color-accent);
 }
 
-/* Primary colored icons */
-.icon-primary {
-  color: var(--color-primary) !important;
+/* Accent colored icons */
+.icon-accent {
+  color: var(--color-accent) !important;
 }
 
 /* Footer */
